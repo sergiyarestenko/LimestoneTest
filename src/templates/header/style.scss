@@ -1,0 +1,117 @@
+.header {
+  color: $navy;
+  flex-direction: row;
+  font-size: 24px;
+  font-weight: bold;
+  height: 75px;
+  line-height: 75px;
+  margin-bottom: 15px;
+  position: relative;
+
+  &-menu {
+    justify-content: flex-start;
+    &-button {
+      cursor: pointer;
+      position: relative;
+      width: auto;
+    }
+    span {
+      background: $navy;
+      display: inline-block;
+      height: 4px;
+      position: absolute;
+      top: calc(50% + 2px);
+      transition: .5s ease-out;
+      width: 30px;
+
+      &::before,
+      &::after {
+        background: $navy;
+        content: '';
+        display: block;
+        height: 4px;
+        position: absolute;
+        transition: .5s ease-out;
+        width: 30px;
+      }
+
+      &::before {
+        top: -8px;
+      }
+
+      &::after {
+        bottom: -8px;
+      }
+
+      &.open {
+        top: calc(50% + 7px);
+        transform: rotate(-45deg);
+        width: 25px;
+
+        &::before {
+          left: 12px;
+          top: -12px;
+          transform: rotate(-90deg);
+          width: 22px;
+        }
+
+        &::after {
+          transition: .15s;
+          width: 0;
+        }
+      }
+    }
+
+    i {
+      font-style: normal;
+      margin-left: 40px;
+
+    }
+  }
+
+  &-logo {
+    height: auto;
+    left: calc(50% - 60px);
+    position: absolute;
+    top: 5px;
+    width: 120px;
+    a {
+      display: inline-flex;
+      height: auto;
+    }
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+  &-reg {
+    justify-content: flex-end;
+    p {
+      background: url('../img/phone_icon.png') no-repeat 0 60%;
+      background-size: auto 25px;
+      margin: 0;
+      padding-left: 35px;
+      padding-right: 20px;
+      position: relative;
+     &::after {
+        content: '|';
+        position: absolute;
+        right: -5px;
+        top: -2px;
+     }
+    }
+    a {
+      padding-left: 15px;
+
+    }
+    span {
+      background: url('../img/icon_coub.png') no-repeat 50% 50%;
+      background-size: contain;
+      cursor: pointer;
+      display: inline-flex;
+      height: 45px;
+      margin: auto 0 auto 10px;
+      width: 30px;
+    }
+  }
+}

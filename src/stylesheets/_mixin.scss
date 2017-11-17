@@ -1,0 +1,3 @@
+@mixin m-transition ($time) {
+  transition: $time ease-out;
+}

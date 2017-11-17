@@ -1,0 +1,62 @@
+.menu{
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 1px solid $grey-bord;
+  padding:0 310px;
+  a {
+    box-sizing: border-box;
+    align-items:flex-end;
+    display: inline-flex;
+    height: 160px;
+    width: 100%;
+    max-width: 25%;
+    justify-content: center;
+    color: $grey-font;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-bottom: 35px;
+    transition: .5s ;
+    border:1px solid $grey-bord;
+    border-image: url("../img/border.png")  27 round;
+    border-width: 0 1px 0 0 ;
+    &:nth-child(1){
+      background: url("../img/icon_sysnems.png") no-repeat 50% 30px;
+      background-size: auto 50px;
+      border-width: 0 1px 0 1px;
+    }
+    &:nth-child(2){
+      background: url("../img/icon_formulas.png") no-repeat 50% 30px;
+      background-size: auto 50px;
+    }
+    &:nth-child(3){
+      background: url("../img/icon_join.png") no-repeat 50% 35px;
+      background-size: auto 40px;
+    }
+    &:nth-child(4){
+      background: url("../img/icon_reviews.png") no-repeat 50% 35px;
+      background-size: auto 50px;
+    }
+    &:hover{
+      color: $white;
+      border: none;
+      &:nth-child(1){
+        background: $purple url("../img/icon_sysnems_white.png") no-repeat 50% 30px;
+        background-size: auto 50px;
+        border: none;
+      }
+      &:nth-child(2){
+        background: $purple url("../img/icon_formulas_white.png") no-repeat 50% 30px;
+        background-size: auto 50px;
+      }
+      &:nth-child(3){
+        background: $purple url("../img/icon_join_white.png") no-repeat 50% 35px;
+        background-size: auto 40px;
+      }
+      &:nth-child(4){
+        background: $purple url("../img/icon_reviews_white.png") no-repeat 50% 35px;
+        background-size: auto 50px;
+      }
+
+    }
+  }
+}
